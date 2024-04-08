@@ -1,33 +1,53 @@
-<div class='flex-container'>
-
-    <div class="header">
-
-        <div class='logo' routerLink='./'>
-            <img src="/assets/image/logo.png" width="140" height="60" />
-          </div>
-  
-        <div class="menu">
-            <div class="menus" routerLink='./'>หน้าหลัก</div>
-            <div class="menus" routerLink='./product'>สินค้า</div>
-            <!-- <div class="menus" routerLink='./promotion'>โปรโมชั่น</div> -->
-            <!-- <div class="menus" routerLink='./service'>ศูนย์บริการลูกค้า</div> -->
-            <div class="menus" routerLink='./question'>คำถามที่พบบ่อย</div>
-            <!-- <div class="menus" routerLink='./work'>ร่วมงานกับเรา</div> -->
-            <div class="menus" routerLink='./about'>เกี่ยวกับเรา</div>
-            <div class="menus" routerLink='./contact'>ติดต่อเรา</div>
-        </div>
-        
-        <div class="login"><a href="http://gps.gpsguru.co.th/" target="_blank"> เข้าสู่ระบบ </a></div>
-
+<div class="flex-container">
+  <div class="header">
+    <div class="logo" routerLink="./">
+      <img src="/assets/image/logo.png" width="140" height="60" />
     </div>
 
-    <div class="section">
-        <router-outlet></router-outlet>
+    <!-- <div class="menu">
+      <div class="menus" routerLink="./">หน้าหลัก</div>
+      <div class="menus" routerLink="./product">สินค้า</div>
+      <div class="menus" routerLink='./promotion'>โปรโมชั่น</div>
+      <div class="menus" routerLink='./service'>ศูนย์บริการลูกค้า</div>
+      <div class="menus" routerLink="./question">คำถามที่พบบ่อย</div>
+      <div class="menus" routerLink='./work'>ร่วมงานกับเรา</div>
+    <div class="menus" routerLink="./about">เกี่ยวกับเรา</div> 
+      <div class="menus" routerLink="./contact">ติดต่อเรา</div>
+    </div> -->
+
+    <div class="menu" id="myTopnav">
+        <button class="menu-button" type="button" (click)="toggleMenu()">
+          <span>menu</span>
+        </button>
+        <ul class="dropdown-menu" *ngIf="isMenuOpen; else gg" (click)="toggleMenu()">
+          <li class="menus"><a routerLink="./">หน้าหลัก</a></li>
+          <li class="menus"><a routerLink="./product">สินค้า</a></li>
+          <li class="menus"><a routerLink="./question">คำถามที่พบบ่อย</a></li>
+          <li class="menus"><a routerLink="./about">เกี่ยวกับเรา</a></li>
+          <li class="menus"><a routerLink="./contact">ติดต่อเรา</a></li>
+        </ul>
+        <ng-template #gg>
+              <ul class="dropdown-menu">
+                <li class="menus"><a routerLink="./">หน้าหลัก</a></li>
+                <li class="menus"><a routerLink="./product">สินค้า</a></li>
+                <li class="menus"><a routerLink="./question">คำถามที่พบบ่อย</a></li>
+                <li class="menus"><a routerLink="./about">เกี่ยวกับเรา</a></li>
+                <li class="menus"><a routerLink="./contact">ติดต่อเรา</a></li>
+              </ul>
+        </ng-template>
+      </div>
+      
+      
+
+    <div class="login">
+      <a href="http://gps.gpsguru.co.th/" target="_blank"> เข้าสู่ระบบ </a>
     </div>
+  </div>
 
-    <div class="footer">
+  <div class="section">
+    <router-outlet></router-outlet>
+  </div>
 
-    </div>
-
+  <div class="footer"></div>
 </div>
 
