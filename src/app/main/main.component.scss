@@ -1,0 +1,84 @@
+  .flex-container{  
+
+    background-image: url('/assets/image/Trailer_White_0.jpg');
+    
+    height: 100vh;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+ 
+    .header{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(88, 88, 88);
+
+        width: 100%;
+        height: 80px;
+
+        background-color: rgba(255, 255, 255, 0.7);
+        box-shadow: rgba(230, 230, 230, 1) 0px -5px 10px 10px;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+
+        .logo{
+            height: 100%;
+            width: 20%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu{
+            height: 100%;
+            width: 60%;
+            font-size: 15px;
+            // background-color: hotpink;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .menus{
+                margin-left: 10px;
+                margin-right: 10px;
+                cursor: pointer; 
+            }
+            .menus:hover{
+                color: rgb(120, 120, 120)
+            }
+            
+        }
+        .login{
+            height: 100%;
+            width: 20%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .section{
+        width: 100%;
+        height: calc(100vh - 80px);
+        // background-color: rgb(255, 255, 255);
+    }
+
+
+    .footer{
+        width: 100%;
+        height: 300px;
+
+        background-color: rgb(50, 50, 50);
+    }
+
+
+
+
+}

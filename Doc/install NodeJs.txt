@@ -1,0 +1,13 @@
+
+- Install NodeJS
+
+	npx express-generator --no-view
+		or
+	npm init -y
+
+
+	npm i bcrypt express body-parser mongodb mongoose cors nodemon cookie-parser jsonwebtoken
+
+
+
+

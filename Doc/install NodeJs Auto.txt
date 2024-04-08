@@ -1,0 +1,29 @@
+
+- Install NodeJS
+	
+	https://nodejs.org/en/
+
+	npm install -g express-generator
+
+	npm i express --save
+	npm i body-parser --save
+
+	express --view=ejs Sockeep
+
+
+	cd Sockeep
+	npm install
+	npm start
+	
+	npm install nodemon
+	npx nodemon
+
+
+- DataBase Mongodb
+
+	npm install mongodb
+	npm install mongoose
+
+
+
+

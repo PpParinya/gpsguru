@@ -1,0 +1,16 @@
+1. sudo npm install -g firebase-tools
+2. firebase login (if error :> firebase login --reauth)
+3. firebase init
+	---- # Select ----
+	- Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
+	- Use an existing project
+		- sockeep-bcb4e (Sockeep)
+
+	---- Edit the firebase.json file. ----
+	"public": "Sockeep",
+
+4. firebase deploy
+
+	=== Ng build --prod && cd dist && firebase deploy && cd .. ===
+
+	=== Ng build && cd dist && firebase deploy && cd .. ===

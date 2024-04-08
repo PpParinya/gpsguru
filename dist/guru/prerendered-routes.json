@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "/",
+    "/about",
+    "/contact",
+    "/product",
+    "/promotion",
+    "/question",
+    "/service",
+    "/work"
+  ]
+}

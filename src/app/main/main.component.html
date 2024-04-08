@@ -1,0 +1,33 @@
+<div class='flex-container'>
+
+    <div class="header">
+
+        <div class='logo' routerLink='./'>
+            <img src="/assets/image/logo.png" width="140" height="60" />
+          </div>
+  
+        <div class="menu">
+            <div class="menus" routerLink='./'>หน้าหลัก</div>
+            <div class="menus" routerLink='./product'>สินค้า</div>
+            <!-- <div class="menus" routerLink='./promotion'>โปรโมชั่น</div> -->
+            <!-- <div class="menus" routerLink='./service'>ศูนย์บริการลูกค้า</div> -->
+            <div class="menus" routerLink='./question'>คำถามที่พบบ่อย</div>
+            <!-- <div class="menus" routerLink='./work'>ร่วมงานกับเรา</div> -->
+            <div class="menus" routerLink='./about'>เกี่ยวกับเรา</div>
+            <div class="menus" routerLink='./contact'>ติดต่อเรา</div>
+        </div>
+        
+        <div class="login"><a href="http://gps.gpsguru.co.th/" target="_blank"> เข้าสู่ระบบ </a></div>
+
+    </div>
+
+    <div class="section">
+        <router-outlet></router-outlet>
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+</div>
+

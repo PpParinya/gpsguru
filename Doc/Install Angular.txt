@@ -1,0 +1,71 @@
+Angular
+
+Install 
+	1. VScode 				// ติดตั้งแล้วกด Auto Save ใน VScose ด้วย 
+	2. Node js (https://nodejs.org/)
+	3. Angular cli  ( Mac => “ sudo”  https://cli.angular.io/)
+
+		Test CMD 
+			- node -v
+			- npm -v
+			- ng version
+
+New Projcet
+	1. ng new “Name Project” 
+	2. cd in Project
+	3. ng serve                                 
+	4. ng g c components/Form  “OR add” --export=true
+	5. ng g module name --routing
+	6. ng g s services/share
+	7. npm install --save changedpi
+	8. npm install fabric --save
+	9. ng g guard auth.   —select : CanActivate
+	
+ 
+plugin 
+
+	1. vscode-icons
+	2. angular2-switcher
+	3. Angular 8 Snippets
+	4. Bootstrap 4
+	5. Prettier
+
+
+Open Project
+	npm install 
+
+Run
+	Ng build
+	Ng build --prod --deploy-url /Name_folder/ --base-href /Name_folder/
+
+
+Run javasclip Auto
+	
+	sudo npm i -g nodemon    // ต้อนใช้เรียกที่อยู่ พาด: nodemon c/app/file.js
+
+MySQL
+
+	npm i --save express
+	npm i --save body-parser
+	
+
+
+Error
+	1219: In Visual Code Studio Go to File >> Preferences >> Settings, Search "decorator" in search field and Check the option as in image. 
+		https://stackoverflow.com/questions/38271273/experimental-decorators-warning-in-typescript-compilation
+
+bootstrap
+	npm install bootstrap font-awesome
+	npm install bootstrap@next --save
+	npm install jquery --save
+	npm install popper.js --save
+
+
+
+Map
+	npm i -D @types/google.maps
+
+
+
+
+
