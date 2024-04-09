@@ -47,10 +47,6 @@
         margin: 10px;
         cursor: pointer;
       }
-
-      .menus:hover {
-        color: rgb(120, 120, 120);
-      }
     }
     .login {
       height: 100%;
@@ -83,9 +79,27 @@ $breakpoint: 768px;
   justify-content: space-between;
   align-items: center;
 
+  .desktop-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  @media (max-width: $breakpoint) {
+    .desktop-menu {
+      display: none;
+    }
+
+    .dropdown-menu {
+      display: none;
+    }
+
+    .dropdown-menu.open {
+      display: flex;
+    }
+  }
   .menu-button {
     display: none;
-    
 
     @media (max-width: $breakpoint) {
       display: block;
@@ -100,42 +114,36 @@ $breakpoint: 768px;
   }
 
   .dropdown-menu {
-    display: flex;
-    flex-direction: row;
+    display: none;
+    flex-direction: column; /* เปลี่ยนเป็น column เพื่อให้เมนู dropdown แสดงแนวตั้ง */
     list-style: none;
     margin: 0;
     padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 10;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 
-    @media (max-width: $breakpoint) {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background-color: #fff;
-      z-index: 10;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
 
-      li {
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-
-        &:last-child {
-          border-bottom: none;
-        }
+      &:last-child {
+        border-bottom: none;
       }
+    }
 
-      a {
-        text-decoration: none;
-        color: #333;
-      }
+    a {
+      text-decoration: none;
+      color: #333;
     }
   }
 
-  &:hover .dropdown-menu {
-    @media (max-width: $breakpoint) {
-      display: block;
-    }
+  .dropdown-menu.open {
+    display: flex; /* เมื่อ .open มีอยู่ใน .dropdown-menu แสดงเมนู dropdown */
   }
 }
-

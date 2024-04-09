@@ -15,27 +15,32 @@
       <div class="menus" routerLink="./contact">ติดต่อเรา</div>
     </div> -->
 
-    <div class="menu" id="myTopnav">
+      <div class="menu" id="myTopnav">
         <button class="menu-button" type="button" (click)="toggleMenu()">
           <span>menu</span>
         </button>
-        <ul class="dropdown-menu" *ngIf="isMenuOpen; else gg" (click)="toggleMenu()">
-          <li class="menus"><a routerLink="./">หน้าหลัก</a></li>
-          <li class="menus"><a routerLink="./product">สินค้า</a></li>
-          <li class="menus"><a routerLink="./question">คำถามที่พบบ่อย</a></li>
-          <li class="menus"><a routerLink="./about">เกี่ยวกับเรา</a></li>
-          <li class="menus"><a routerLink="./contact">ติดต่อเรา</a></li>
+        <ul *ngIf="!isMenuOpen; else mobileMenu" class="desktop-menu">
+          <!-- Desktop Menu Items -->
+          <li class="menus"><div routerLink="./">หน้าหลัก</div></li>
+          <li class="menus"><div routerLink="./product">สินค้า</div></li>
+          <li class="menus"><div routerLink="./question">คำถามที่พบบ่อย</div></li>
+          <li class="menus"><div routerLink="./about">เกี่ยวกับเรา</div></li>
+          <li class="menus"><div routerLink="./contact">ติดต่อเรา</div></li>
         </ul>
-        <ng-template #gg>
-              <ul class="dropdown-menu">
-                <li class="menus"><a routerLink="./">หน้าหลัก</a></li>
-                <li class="menus"><a routerLink="./product">สินค้า</a></li>
-                <li class="menus"><a routerLink="./question">คำถามที่พบบ่อย</a></li>
-                <li class="menus"><a routerLink="./about">เกี่ยวกับเรา</a></li>
-                <li class="menus"><a routerLink="./contact">ติดต่อเรา</a></li>
-              </ul>
+        <ng-template #mobileMenu>
+          <ul class="dropdown-menu" [class.open]="isMenuOpen" (click)="toggleMenu()">
+            <!-- Mobile Menu Items -->
+            <li class="menus"><div routerLink="./">หน้าหลัก</div></li>
+            <li class="menus"><div routerLink="./product">สินค้า</div></li>
+            <li class="menus"><div routerLink="./question">คำถามที่พบบ่อย</div></li>
+            <li class="menus"><div routerLink="./about">เกี่ยวกับเรา</div></li>
+            <li class="menus"><div routerLink="./contact">ติดต่อเรา</div></li>
+          </ul>
         </ng-template>
       </div>
+      
+      
+      
       
       
 
