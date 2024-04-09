@@ -7,13 +7,24 @@
     // justify-content: center;
     // align-items: center;
     flex-direction: column;
+    z-index: 1;
 
     // background-color: white;
     .drop-info {
+      z-index: 1;
       background-color: rgba(255, 255, 255, 0.7);
       box-shadow: rgba(230, 230, 230, 1) 0px -5px 10px 10px;
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
+      // -webkit-backdrop-filter: blur(10px);
+      // backdrop-filter: blur(10px);
     }
+  }
+
+  .question .mat-tree-node:first-child {
+    /* สไตล์ที่คุณต้องการให้รายการแรกใน index ที่ 0 */
+    font-size: 26px;
+    // margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
   }
 }

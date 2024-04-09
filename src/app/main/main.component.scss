@@ -67,6 +67,7 @@
     width: 100%;
     height: calc(100vh - 80px);
     // background-color: rgb(255, 255, 255);
+    z-index: 1;
   }
 
   .footer {
@@ -138,15 +139,17 @@ $breakpoint: 768px;
     left: 0;
     right: 0;
     background-color: #fff;
-    z-index: 10;
+    z-index: 2;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     cursor: pointer;
-
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: rgba(230, 230, 230, 1) 0px -5px 10px 10px;
-    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
+
+    // 
+    // box-shadow: rgba(230, 230, 230, 1) 0px -5px 10px 10px;
+    // -webkit-backdrop-filter: blur(10px);
+    // backdrop-filter: blur(10px);
 
     li {
       padding: 10px;
