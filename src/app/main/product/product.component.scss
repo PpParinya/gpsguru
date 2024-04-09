@@ -1,5 +1,5 @@
 .flex-container{
-
+    background-color: white;
     .product{
         width: 100%;
         // height: calc(100vh - 80px);
@@ -10,7 +10,7 @@
 
         .product-title {
             margin-top: 20px;
-            margin-left: 50px;
+            margin-left: 30px;
         }
 
         .crad{
@@ -18,5 +18,23 @@
            justify-self: center;
            align-items: center;
         }
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+    .product {
+      width: 100%; /* ขยายขนาดสินค้าให้เต็มความกว้างของหน้าจอ */
+    //   margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างสินค้า */
+    }
+}
+@media screen and (max-width: 480px) {
+    img {
+      width: 100px; /* ขยายขนาดรูปให้เต็มความกว้างของพื้นที่ของรูป */
+      height: auto; /* ปรับส่วนสูงของรูปให้ปรับอัตโนมัติตามอัตราส่วน */
     }
 }

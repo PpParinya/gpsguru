@@ -127,20 +127,22 @@ $breakpoint: 768px;
     z-index: 10;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    cursor: pointer;
+    
 
     li {
       padding: 10px;
       border-bottom: 1px solid #ddd;
+      align-items: center;
 
       &:last-child {
         border-bottom: none;
       }
     }
-
-    a {
-      text-decoration: none;
-      color: #333;
-    }
+    li:hover {
+      // color: aqua;
+      background-color: rgb(170, 177, 177);
+  }
   }
 
   .dropdown-menu.open {
