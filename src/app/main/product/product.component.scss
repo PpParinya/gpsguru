@@ -2,13 +2,21 @@
 
     .product{
         width: 100%;
-        height: calc(100vh - 80px);
+        // height: calc(100vh - 80px);
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        // display: flex;
 
         background-color: white;
+
+        .product-title {
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+
+        .crad{
+           display: flex;
+           justify-self: center;
+           align-items: center;
+        }
     }
 }
