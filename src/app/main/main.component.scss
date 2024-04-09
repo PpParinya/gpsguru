@@ -7,6 +7,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: scroll;
 
   .header {
     display: flex;
@@ -32,8 +33,6 @@
       align-items: center;
     }
     .menu {
-      height: 100%;
-      width: 60%;
       font-size: 15px;
       // background-color: hotpink;
 
@@ -44,8 +43,14 @@
       .menus {
         // margin-left: 10px;
         // margin-right: 10px;
-        margin: 10px;
+        // margin: 10px;
         cursor: pointer;
+        text-align: center;
+        width: 110px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
     .login {
@@ -75,16 +80,25 @@
 $breakpoint: 768px;
 
 .menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
 
   .desktop-menu {
     display: flex;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
+
+    li:hover {
+      background-color: rgb(170, 177, 177);
+    }
   }
+  .desktop-menu li:hover {
+    background-color: rgb(170, 177, 177);
+  }
+
   @media (max-width: $breakpoint) {
     .desktop-menu {
       display: none;
@@ -128,7 +142,11 @@ $breakpoint: 768px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     cursor: pointer;
-    
+
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: rgba(230, 230, 230, 1) 0px -5px 10px 10px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 
     li {
       padding: 10px;
@@ -142,10 +160,26 @@ $breakpoint: 768px;
     li:hover {
       // color: aqua;
       background-color: rgb(170, 177, 177);
-  }
+    }
   }
 
   .dropdown-menu.open {
     display: flex; /* เมื่อ .open มีอยู่ใน .dropdown-menu แสดงเมนู dropdown */
   }
+}
+
+//icon-menu
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(82, 86, 86);
+  margin: 6px 0;
+  transition: 0.4s;
 }

@@ -1,14 +1,17 @@
-.flex-container{
+.flex-container {
+  .about {
+    width: 100%;
+    height: calc(100vh - 80px);
 
-    .about{
-        width: 100%;
-        height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        background-color: white;
-    }
+    // background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: rgba(230, 230, 230, 1) 0px -5px 10px 10px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
 }

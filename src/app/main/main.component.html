@@ -15,34 +15,34 @@
       <div class="menus" routerLink="./contact">ติดต่อเรา</div>
     </div> -->
 
-      <div class="menu" id="myTopnav">
-        <button class="menu-button" type="button" (click)="toggleMenu()">
+    <div class="menu" id="myTopnav">
+      <!-- <button class="menu-button" type="button" (click)="toggleMenu()">
           <span>menu</span>
-        </button>
-        <ul *ngIf="!isMenuOpen; else mobileMenu" class="desktop-menu">
-          <!-- Desktop Menu Items -->
-          <li class="menus"><div routerLink="./">หน้าหลัก</div></li>
-          <li class="menus"><div routerLink="./product">สินค้า</div></li>
-          <li class="menus"><div routerLink="./question">คำถามที่พบบ่อย</div></li>
-          <li class="menus"><div routerLink="./about">เกี่ยวกับเรา</div></li>
-          <li class="menus"><div routerLink="./contact">ติดต่อเรา</div></li>
-        </ul>
-        <ng-template #mobileMenu>
-          <ul class="dropdown-menu" [class.open]="isMenuOpen" (click)="toggleMenu()">
-            <!-- Mobile Menu Items -->
-            <li><div routerLink="./">หน้าหลัก</div></li>
-            <li><div routerLink="./product">สินค้า</div></li>
-            <li><div routerLink="./question">คำถามที่พบบ่อย</div></li>
-            <li><div routerLink="./about">เกี่ยวกับเรา</div></li>
-            <li><div routerLink="./contact">ติดต่อเรา</div></li>
-          </ul>
-        </ng-template>
+        </button> -->
+      <div class="menu-button" (click)="toggleMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
       </div>
-      
-      
-      
-      
-      
+      <ul *ngIf="!isMenuOpen; else mobileMenu" class="desktop-menu">
+        <!-- Desktop Menu Items -->
+        <li><div class="menus" routerLink="./">หน้าหลัก</div></li>
+        <li><div class="menus" routerLink="./product">สินค้า</div></li>
+        <li><div class="menus" routerLink="./question">คำถามที่พบบ่อย</div></li>
+        <li><div class="menus" routerLink="./about">เกี่ยวกับเรา</div></li>
+        <li><div class="menus" routerLink="./contact">ติดต่อเรา</div></li>
+      </ul>
+      <ng-template #mobileMenu>
+        <ul class="dropdown-menu" [class.open]="isMenuOpen" (click)="toggleMenu()">
+          <!-- Mobile Menu Items -->
+          <li><div routerLink="./">หน้าหลัก</div></li>
+          <li><div routerLink="./product">สินค้า</div></li>
+          <li><div routerLink="./question">คำถามที่พบบ่อย</div></li>
+          <li><div routerLink="./about">เกี่ยวกับเรา</div></li>
+          <li><div routerLink="./contact">ติดต่อเรา</div></li>
+        </ul>
+      </ng-template>
+    </div>
 
     <div class="login">
       <a href="http://gps.gpsguru.co.th/" target="_blank"> เข้าสู่ระบบ </a>
@@ -53,6 +53,5 @@
     <router-outlet></router-outlet>
   </div>
 
-  <div class="footer"></div>
+  <!-- <div class="footer"></div> -->
 </div>
-
