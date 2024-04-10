@@ -1,16 +1,33 @@
-.flex-container{
+$breakpoint: 768px;
 
-    // background-color: aquamarine;
+.flex-container {
+  // background-color: aquamarine;
 
-    .home{
-        width: 50%;
-        height: 100px;
+  .home {
+    width: 50%;
+    height: 100px;
 
-        display: flex;
-        // justify-content: center;
-        align-items: center;
-        flex-direction: column;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-        padding-top: 100px;
+    padding-top: 100px;
+
+    .font-head{
+        font-size: 40px;
     }
+    .font{
+        font-size: 20px;
+    }
+
+    @media (max-width: $breakpoint) {
+        .font-head{
+            font-size: 20px;
+        }
+        .font{
+            font-size: 10px;
+        }
+    }
+  }
 }

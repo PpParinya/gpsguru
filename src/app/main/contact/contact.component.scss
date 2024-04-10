@@ -1,17 +1,33 @@
+// .flex-container {
+//   .contact {
+//     width: 100%;
+//     height: calc(100vh - 80px);
+
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+
+//     background-color: rgba(255, 255, 255, 0.95);
+//     box-shadow: rgba(230, 230, 230, 1) 0px -5px 10px 10px;
+//     // -webkit-backdrop-filter: blur(10px);
+//     // backdrop-filter: blur(10px);
+//     // background-color: white;
+//   }
+// }
 .flex-container {
-  .contact {
-    width: 100%;
-    height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center; /* จัดเนื้อหาตรงกลางในแนวนอน */
+  align-items: center; /* จัดเนื้อหาตรงกลางในแนวตั้ง */
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.95); /* สีพื้นหลังโปร่งใส */
+  box-shadow: rgba(230, 230, 230, 1) 0px -5px 10px 10px; /* เพิ่มเงาให้กับพื้นหลัง */
+  width: 100%;
+  height: calc(100vh - 80px);
+}
 
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: rgba(230, 230, 230, 1) 0px -5px 10px 10px;
-    // -webkit-backdrop-filter: blur(10px);
-    // backdrop-filter: blur(10px);
-    // background-color: white;
-  }
+.contact {
+  text-align: center; /* จัดเนื้อหาภายใน div.contact ตรงกลาง */
+  max-width: 600px; /* กำหนดความกว้างสูงสุดของเนื้อหา */
+  padding: 20px; /* ให้มีพื้นที่ระยะห่างรอบขอบของเนื้อหา */
 }

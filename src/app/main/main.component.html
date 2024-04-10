@@ -1,14 +1,14 @@
 <div class="flex-container">
   <div class="header">
     <div class="logo" routerLink="./">
-      <img src="/assets/image/logo.png" width="140" height="60" />
+      <img class="img" src="/assets/image/logo.png"/>
     </div>
 
     <div class="menu" id="myTopnav">
       <div class="menu-button" (click)="toggleMenu()">
         <div class="bar1"></div>
         <div class="bar2"></div>
-        <div class="bar3"></div>
+        <div class="bar3"></div>    
       </div>
       <ul *ngIf="!isMenuOpen; else mobileMenu" class="desktop-menu">
         <!-- Desktop Menu Items -->
@@ -21,11 +21,11 @@
       <ng-template #mobileMenu>
         <ul class="dropdown-menu" [class.open]="isMenuOpen" (click)="toggleMenu()">
           <!-- Mobile Menu Items -->
-          <li><div routerLink="./">หน้าหลัก</div></li>
-          <li><div routerLink="./product">สินค้า</div></li>
-          <li><div routerLink="./question">คำถามที่พบบ่อย</div></li>
-          <li><div routerLink="./about">เกี่ยวกับเรา</div></li>
-          <li><div routerLink="./contact">ติดต่อเรา</div></li>
+          <li routerLink="./">หน้าหลัก</li>
+          <li routerLink="./product">สินค้า</li>
+          <li routerLink="./question">คำถามที่พบบ่อย</li>
+          <li routerLink="./about">เกี่ยวกับเรา</li>
+          <li routerLink="./contact">ติดต่อเรา</li>
         </ul>
       </ng-template>
     </div>

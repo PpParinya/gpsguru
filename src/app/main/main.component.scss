@@ -26,9 +26,7 @@
     backdrop-filter: blur(10px);
 
     .logo {
-      height: 100%;
-      width: 20%;
-
+      margin-left: 35px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -42,12 +40,9 @@
       align-items: center;
 
       .menus {
-        // margin-left: 10px;
-        // margin-right: 10px;
-        // margin: 10px;
         cursor: pointer;
         text-align: center;
-        width: 110px;
+        width: 105px;
         height: 60px;
         display: flex;
         justify-content: center;
@@ -55,9 +50,7 @@
       }
     }
     .login {
-      height: 100%;
-      width: 20%;
-
+      margin-right: 35px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -81,11 +74,25 @@
 
 $breakpoint: 768px;
 
-.menu {
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
+.logo {
+  @media (max-width: $breakpoint) {
+    margin-left: 35px;
+  }
+}
 
+.img {
+  @media (max-width: $breakpoint) {
+    height: 30px;
+  }
+}
+
+.login {
+  @media (max-width: $breakpoint) {
+    margin-right: 35px;
+  }
+}
+
+.menu {
   .desktop-menu {
     display: flex;
     justify-content: center;
@@ -122,10 +129,6 @@ $breakpoint: 768px;
       border: none;
       background-color: transparent;
       cursor: pointer;
-
-      span {
-        font-size: 24px;
-      }
     }
   }
 
@@ -136,8 +139,6 @@ $breakpoint: 768px;
     margin: 0;
     padding: 0;
     position: absolute;
-    // position: fixed;
-    // position: relative;
     top: 100%;
     left: 0;
     right: 0;
@@ -146,6 +147,12 @@ $breakpoint: 768px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     cursor: pointer;
+
+    //animation
+    height: auto;
+    overflow: hidden;
+    animation: slideDown 0.3s ease;
+    transform-origin: top center;
 
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: rgba(230, 230, 230, 1) 0px -5px 10px 10px;
@@ -169,6 +176,7 @@ $breakpoint: 768px;
 
   .dropdown-menu.open {
     display: flex; /* เมื่อ .open มีอยู่ใน .dropdown-menu แสดงเมนู dropdown */
+    // height: auto;
   }
 }
 
@@ -186,4 +194,13 @@ $breakpoint: 768px;
   background-color: rgb(82, 86, 86);
   margin: 6px 0;
   transition: 0.4s;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
