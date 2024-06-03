@@ -17,18 +17,46 @@
 // }
 
 .flex-container {
-  display: flex;
-  justify-content: center; /* จัดเนื้อหาตรงกลางในแนวนอน */
-  align-items: center; /* จัดเนื้อหาตรงกลางในแนวตั้ง */
+  
 
   background-color: rgba(255, 255, 255, 0.95); /* สีพื้นหลังโปร่งใส */
   box-shadow: rgba(230, 230, 230, 1) 0px -5px 10px 10px; /* เพิ่มเงาให้กับพื้นหลัง */
-  width: 100%;
+  // width: 100%;
   height: calc(100vh - 80px);
-}
 
+  display: flex;
+  justify-content: center; /* จัดเนื้อหาตรงกลางในแนวนอน */
+  align-items: center; /* จัดเนื้อหาตรงกลางในแนวตั้ง */
+}
+.card{
+  display: flex;
+  justify-content: center; /* จัดเนื้อหาตรงกลางในแนวนอน */
+  align-items: center; /* จัดเนื้อหาตรงกลางในแนวตั้ง */
+}
 .about {
+  // margin-top: 20px;
   text-align: center; /* จัดเนื้อหาภายใน div.contact ตรงกลาง */
-  max-width: 600px; /* กำหนดความกว้างสูงสุดของเนื้อหา */
+  // max-width: 600px; /* กำหนดความกว้างสูงสุดของเนื้อหา */
   padding: 20px; /* ให้มีพื้นที่ระยะห่างรอบขอบของเนื้อหา */
 }
+.logo-customer{
+  width: 100px;
+  height: 120px;
+}
+
+.full-image-container {
+  width: 98.9vw;      /* ตั้งค่า width ของ container ให้เต็มจอ */
+  // height: 100vh;     /* ตั้งค่า height ของ container ให้เต็มจอ */
+  overflow: hidden;  /* ซ่อนส่วนที่เกินของรูปภาพ */
+  display: flex;     /* ใช้ flexbox เพื่อจัดศูนย์ */
+  justify-content: center; /* จัดตรงกลางแนวนอน */
+  align-items: center;     /* จัดตรงกลางแนวตั้ง */
+  margin: 0;         /* เอาช่องว่างรอบ container ออก */
+  padding: 0;        /* เอาช่องว่างภายใน container ออก */
+
+  img {
+    width: 100%;       /* ตั้งค่า width ของรูปภาพให้เต็ม container */
+    height: 100%;      /* ตั้งค่า height ของรูปภาพให้เต็ม container */
+    object-fit: cover; /* ปรับให้รูปภาพครอบคลุมทั้งพื้นที่ */
+  }
+} 

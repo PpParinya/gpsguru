@@ -31,3 +31,64 @@ $breakpoint: 768px;
     }
   }
 }
+
+.img-c1 {
+    display: flex;
+    justify-content: center; // จัดตรงกลางตามแนวนอน
+    // align-items: center;     // จัดตรงกลางตามแนวตั้ง
+    height: 100vh;           // ตั้งค่าให้ div มีความสูงเท่ากับความสูงของหน้าจอ
+
+    img {  
+        max-width: 100%;    // ปรับขนาดรูปภาพให้ไม่เกินขนาดของ container
+        height: auto;       // รักษาอัตราส่วนภาพ
+    }
+
+    @media (max-width: $breakpoint) {
+
+        height: auto;       // ปรับความสูงอัตโนมัติเมื่อขนาดหน้าจอน้อยกว่า breakpoint
+        // padding: 20px;      // เพิ่ม padding เพื่อให้ดูดีในหน้าจอเล็ก
+
+        img {
+            max-width: 100%; // ปรับขนาดรูปภาพให้ไม่เกินขนาดของ container
+            height: auto;    // รักษาอัตราส่วนภาพ
+        }
+    }
+}
+
+.img-c2 {
+    display: flex;
+    justify-content: center; // จัดตรงกลางตามแนวนอน
+    align-items: center;     // จัดตรงกลางตามแนวตั้ง
+    // height: 100vh;           // ตั้งค่าให้ div มีความสูงเท่ากับความสูงของหน้าจอ
+    width: 98.9vw;            // ตั้งค่าให้ div มีความกว้างเท่ากับความกว้างของหน้าจอ
+
+    img {  
+        width: 100%;         // ตั้งค่า width ของรูปภาพให้เต็มจอ
+        height: 100%;        // ตั้งค่า height ของรูปภาพให้เต็มจอ
+        object-fit: cover;   // ปรับให้รูปภาพครอบคลุมทั้งพื้นที่
+    }
+
+    @media (max-width: $breakpoint) {
+        height: auto;        // ปรับความสูงอัตโนมัติเมื่อขนาดหน้าจอน้อยกว่า breakpoint
+        width: 100%;         // ปรับความกว้างอัตโนมัติเมื่อขนาดหน้าจอน้อยกว่า breakpoint
+
+        img {
+            width: 100%;     // ตั้งค่า width ของรูปภาพให้เต็มจอ
+            height: auto;    // รักษาอัตราส่วนภาพ
+        }
+    }
+}
+
+.img-c3 {
+    width: 100%;        /* ตั้งค่า width ของ container เป็น 100% */
+    // height: 80vh;      /* ตั้งค่า height ของ container ให้เต็มจอ */
+    display: flex;      /* ใช้ flexbox เพื่อจัดศูนย์ */
+    justify-content: center; /* จัดตรงกลางแนวนอน */
+    align-items: center;     /* จัดตรงกลางแนวตั้ง */
+
+    img {
+        width: 100%;        /* ตั้งค่า width ของรูปภาพเป็น 100% */
+        // height: auto;       /* รักษาอัตราส่วนของรูปภาพ */
+        object-fit: cover;  /* ปรับให้รูปภาพครอบคลุมทั้งพื้นที่ (ถ้าจำเป็น) */
+    }
+}
