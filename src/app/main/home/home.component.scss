@@ -39,7 +39,8 @@ $breakpoint: 768px;
     height: 100vh;           // ตั้งค่าให้ div มีความสูงเท่ากับความสูงของหน้าจอ
 
     img {  
-        max-width: 100%;    // ปรับขนาดรูปภาพให้ไม่เกินขนาดของ container
+        max-width: 100%; 
+        width: 100%;   // ปรับขนาดรูปภาพให้ไม่เกินขนาดของ container
         height: auto;       // รักษาอัตราส่วนภาพ
     }
 
@@ -92,3 +93,28 @@ $breakpoint: 768px;
         object-fit: cover;  /* ปรับให้รูปภาพครอบคลุมทั้งพื้นที่ (ถ้าจำเป็น) */
     }
 }
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1680px; /* กำหนดความกว้างสูงสุดเพื่อให้มีแค่ 7 โลโก้ต่อแถว */
+    margin: 0 auto; /* จัดกลาง container */
+}
+.logo-customer {
+    width: 220px;
+    height: 140px;
+    margin: 10px; /* เพิ่มช่องว่างระหว่างโลโก้ */
+    border: 2px solid #000; /* กำหนดกรอบรูปสีดำ */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กรอบ */
+}
+
+.header {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* เปลี่ยนสีพื้นหลังตามต้องการ */
+    padding: 20px;
+}
+
